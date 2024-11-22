@@ -28,8 +28,8 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist  # 构建输出目录
           branch: gh-pages  # 部署的目标分支 
+          publish_dir: ./dist  # 构建输出目录
           github_token: ${{ secrets.VITE_CI }} # secret 名
           user_name: ${{ secrets.MY_USER_NAME }}
           user_email: ${{ secrets.MY_USER_EMAIL }}
